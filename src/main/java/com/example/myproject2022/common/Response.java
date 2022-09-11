@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class ResponseEntity<T> {
+public class Response<T> {
 
     private String statusCode;
 

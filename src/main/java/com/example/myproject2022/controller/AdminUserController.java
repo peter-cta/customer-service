@@ -1,15 +1,15 @@
 package com.example.myproject2022.controller;
 
 import com.example.myproject2022.common.GeneralResponse;
-import com.example.myproject2022.common.ResponseEntity;
+import com.example.myproject2022.common.Response;
 import com.example.myproject2022.entity.User;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping(value = "/api/admin")
+@RequestMapping(value = "/api/admin/user")
 public interface AdminUserController {
-    @GetMapping(value = "/user/get-all")
-    public ResponseEntity<GeneralResponse<Object>> getAllUsers();
+    @GetMapping(value = "/get-all")
+    public Response<GeneralResponse<Object>> getAllUsers();
 
-    @PostMapping(value = "/user/add")
-    public ResponseEntity<GeneralResponse<Object>> saveUser(@RequestBody User user);
+    @PostMapping(value = "/add")
+    public Response<GeneralResponse<Object>> saveUser(@RequestBody User user);
 }
