@@ -1,17 +1,18 @@
 package com.example.myproject2022.service;
 
-import com.example.myproject2022.entity.Role;
-import com.example.myproject2022.entity.User;
+import com.example.myproject2022.dto.RoleRequestDTO;
+import com.example.myproject2022.dto.UserRequestDTO;
+import com.example.myproject2022.entity.UsersEntity;
 
 import java.util.List;
 
 public interface UserService {
 
-    void saveUser(User user);
+    void saveUser(UserRequestDTO user);
 
-    void saveRole(Role role);
+    void saveRole(RoleRequestDTO role);
 
-    List<User> getUsers();
+    List<UsersEntity> getUsers();
 
     void addRolesToUser(String username, String role);
 

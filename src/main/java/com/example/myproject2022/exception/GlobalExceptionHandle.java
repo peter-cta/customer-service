@@ -13,15 +13,15 @@ import java.util.List;
 
 @ControllerAdvice
 public class GlobalExceptionHandle extends ResponseEntityExceptionHandler {
-    private String BAD_REQUEST = "BAD_REQUEST";
-
-    @ExceptionHandler(BusinessException.class)
-    public final ResponseEntity<ErrorResponse> handleInvalidTraceIdException
-            (MissingHeaderInfoException ex, WebRequest request) {
-        List<String> details = new ArrayList<>();
-        details.add(ex.getLocalizedMessage());
-        ErrorResponse error = new ErrorResponse(BAD_REQUEST, details);
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
-    }
+//    private String BAD_REQUEST = "BAD_REQUEST";
+//
+//    @ExceptionHandler(BusinessException.class)
+//    public final ResponseEntity<ErrorResponse> handleInvalidTraceIdException
+//            (MissingHeaderInfoException ex, WebRequest request) {
+//        List<String> details = new ArrayList<>();
+//        details.add(ex.getLocalizedMessage());
+//        ErrorResponse error = new ErrorResponse(BAD_REQUEST, details);
+//        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+//    }
 
 }
