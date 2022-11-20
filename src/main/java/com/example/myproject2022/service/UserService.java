@@ -16,4 +16,6 @@ public interface UserService {
 
     void addRolesToUser(String username, String role);
 
+    void getDebtInfo();
+
 }
