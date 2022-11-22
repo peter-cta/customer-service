@@ -1,9 +1,7 @@
 package com.example.myproject2022.common;
 
-import com.example.myproject2022.exception.BusinessException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.http.ResponseEntity;
 
 @Service
 @AllArgsConstructor

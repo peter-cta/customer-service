@@ -14,24 +14,21 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UsersEntity {
-    @Basic
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "name")
     private String name;
-    @Basic
+
     @Column(name = "username")
     private String username;
 
-    @Basic
     @Column(name = "password")
     private String password;
 
-    @Basic
     @Column(name = "role")
     private String role;
 }

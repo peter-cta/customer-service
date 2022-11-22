@@ -3,6 +3,7 @@ package com.example.myproject2022.service.impl;
 import com.example.myproject2022.dto.RoleRequestDTO;
 import com.example.myproject2022.dto.UserRequestDTO;
 import com.example.myproject2022.entity.*;
+import com.example.myproject2022.exception.BusinessException;
 import com.example.myproject2022.repository.*;
 import com.example.myproject2022.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -14,17 +15,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import static java.util.Comparator.comparing;
-import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.collectingAndThen;
-import static java.util.stream.Collectors.toCollection;
-
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 
 @Service
@@ -39,9 +32,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     private final PasswordEncoder passwordEncoder;
 
-    private final DebtRemindInfo2Repository debtRemindInfo2Repository;
-
-    private final DebtRemindInfoRepository debtRemindInfoRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
